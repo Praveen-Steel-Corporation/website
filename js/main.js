@@ -1,5 +1,4 @@
 const navbar = document.getElementById('mainNavbar');
-const scrollProgress = document.getElementById('scrollProgress');
 const backToTop = document.getElementById('backToTop');
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.navbar .nav-link');
@@ -9,10 +8,7 @@ const inquiryForm = document.getElementById('inquiryForm');
 
 const updateScrollState = () => {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
 
-    if (scrollProgress) scrollProgress.style.width = `${scrollPercent}%`;
     if (navbar) navbar.classList.toggle('navbar-scrolled', scrollTop > 20);
     if (backToTop) backToTop.classList.toggle('show', scrollTop > 260);
 };
