@@ -189,6 +189,18 @@ h6,
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-actions .btn-outline-light {
+    padding: 12px 30px !important;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-primary-custom {
